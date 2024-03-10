@@ -1,370 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Document</title>
-    <!-- ===== CSS Files ===== -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="color.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="color.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <meta  charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>calculator</title>
 </head>
 <body>
-    <!-- ===== Main Container start ===== -->
-    <div class="main-container">
-        <!-- ===== Aside start ===== -->
-        <div class="aside"> 
-            <div class="logo">
-                <a href="#"><span>Kathir</span></a>
-            </div>
-            <div class="nav-toggler">
-                <span></span>
-            </div>
-            <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about " ><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#services" ><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-              <!--========= protfolio section is hidded by me ==============<li><a href="#"><i class="fa fa-comments"></i>contact</a></li>   --> 
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="output-screen">
+            <button onclick="clear()">CL</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calculate()"class="equal">=</button>
 
-            </ul>
         </div>
-        <!-- ===== Aside end ===== -->
-        <!-- ===== Main content start ===== -->
-        <div class="main-content">
-            <!-- ===== Home section start ===== -->
-            <section class="home section" id="home"> 
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my name is <span class="name">Kathiravan S</span></h3>
-                            <h3 class="my-proffession">I'm a <span class="typing"> Junior Frontend Developer</span></h3>
-                            <p>I'm a Junior Frontend developer|HTML5,CSS3,Javascript Enthusiast.My expertise is to create and website design ,graphic design,and many more...</p>
-                            <a href="./kathiravan resume.pdf" class="btn">Download CV</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="kathiravan.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ===== Home section end ===== -->
-            <!-- ===== About section start ===== -->
-            <section class="about section " id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About Me</h2>
-                        </div>
-                    </div>                
-                        <div class="row">
-                            <div class="about-content padd-15">
-                                <div class="row">
-                                    <div class="about-text padd-15">
-                                     <h3>I'm Kathiravan and <span> Junior Frontend Developer</span></h3>
-                                     <p>"Engineering student with a passion for web developement. Dedicated to honing skills in HTML,CSS and Javascript. Eager to contribute innovative solutions and collaborate on impactful projects.Seeking new challenges and my-proffessional growth." </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="personal-info padd-15">
-                                        <div class="row">
-                                            <div class="info-item padd-15">
-                                                <p>Birthday :<span>17 march 2005</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Age :<span>19</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Website:<span> Update soon</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Email:<span>kathiravan172005@gmail.com</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Degree:<span>BE Electrical and Electronics  Engineering</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Phone:<span>+91 9514106040 </span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>City:<span>India,Tamilnadu</span></p>
-                                            </div>
-                                            <div class="info-item padd-15">
-                                                <p>Linkedin:<span>https://www.linkedin.com/in/kathiravan-s-9023062a6/</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="buttons padd-15">
-                                                <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skills padd-15">
-                                        <div class="row">
-                                            <div class="skill-item padd-15">
-                                                <h5>JS</h5>
-                                                <div class="progress">
-                                                    <div class="progress-in" style="width: 60%;"></div>
-                                                    <div class="skill-percent">50%</div>
-                                                </div>
-                                            </div>  
-                                            <div class="skill-item padd-15">
-                                                <h5>CSS</h5>
-                                                <div class="progress">
-                                                    <div class="progress-in" style="width: 66%;"></div>
-                                                    <div class="skill-percent">60%</div>
-                                                </div>
-                                            </div>  <div class="skill-item padd-15">
-                                                <h5>HTML</h5>
-                                                <div class="progress">
-                                                    <div class="progress-in" style="width: 96%;"></div>
-                                                    <div class="skill-percent">80%</div>
-                                                </div>
-                                            </div>  <div class="skill-item padd-15">
-                                                <h5>WORDPRESS</h5>
-                                                <div class="progress">
-                                                    <div class="progress-in" style="width: 56%;"></div>
-                                                    <div class="skill-percent">40%</div>
-                                                </div>
-                                            </div>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="education padd-15">
-                                        <h3 class="title">Education</h3>
-                                        <div class="row">
-                                            <div class="timeline-box padd-15">
-                                                <div class="timeline shadow-dark">
-                                                    <!-- ===== timeline item ===== -->
-                                                    <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                            <i class="fa fa-calendar"></i> 2022 - 2026
-                                                        </h3>
-                                                        <h4 class="timeline-title">AVS COLLEGE OF TECHNOLOGY <br> B.E - Electrical and Electronics Engineering</h4>
-                                                        <p class="timeline-text">Grade: 7.5 CGPA  Semester<br> SkillS:Javascript,CSS3,HTML5,C,Basic Python,Communication.</p>
-                                                    </div>
-                                                    <!-- ===== timeline item ===== --> 
-                                                    <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2020 - 2022
-                                                        </h3>
-                                                        <h4 class="timeline-title">GOVERNMENT HIGHER SECONDARY SCHOOL</h4>
-                                                        <p class="timeline-text">Field of study:Maths Computer science <br> PERCENTAGE:68.5 <br> Activities and societies: social service,athletics player, leadership is my identity,well communication.
-                                                        </p>
-                                                    </div>           
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="experience padd-15">
-                                        <h3 class="title">Experience</h3>
-                                        <div class="row">
-                                            <div class="timeline-box padd-15">
-                                                <div class="timeline shadow-dark">
-                                                    <!-- ===== timeline item ===== -->
-                                                    <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                            <i class="fa fa-calendar"></i> 25 Feb 2024 to 25 Mar 2024
-                                                        </h3>
-                                                        <h4 class="timeline-title">Web Developement Intern</h4>
-                                                        <p class="timeline-text">CodSoft <br>"As a web developement intern at CodSoft, I successfully Completed three projects:a personal protfolio website, Landing page and a Calculator.  Express  my skills in HTML5,CSS3,Javascript, I developed responsive and user-friendly websites. I gained experience in front-end development , including designing and implementing responsive layouts,integrating third-party API's and optimizing website performence. "
-                                                        </p>
-                                                    </div>
-                                                    <!-- ===== timeline item ===== -->
-                                                    <div class="timeline-item">
-                                                        <div class="circle-dot"></div>
-                                                        <h3 class="timeline-date">
-                                                            <i class="fa fa-calendar"></i> Dec 2023-Jan 2024
-                                                        </h3>
-                                                        <h4 class="timeline-title">Web Developement internship</h4>
-                                                        <p class="timeline-text">Cognifyz Web Developer<br>"During my internship as a Web Developement Intern at Cognifyz Web Developer, I contributed to various web development projects. I create visually appealing and funtional websites using HTML5,CSS3,Javascript. Through agile development methodologies,I collaborated with cross-functional teams to deliver projects with in deadlines."
-                                                        </p>
-                                                    </div>                                                         
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                      
-                            </div>
-                        </div>
-                    </div>
-                </section>
-             <!-- ===== About section End ===== -->
-
-             <!-- ===== Services section start ===== -->
-                <section class="service section " id="services">
-                    <div class="container ">
-                        <div class="row">
-                            <div class="section-title padd-15">
-                                <h2>Services</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-mobile-alt"></i>
-                                    </div>
-                                    <h4>My Services</h4>
-                                    <p>Web Developement,Graphic Design,Creative Solutions...</p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-laptop-code"></i>
-                                    </div>
-                                    <h4>My Projects</h4>
-                                    <p>Personal Protfolio site, To Do List App, Landing page, Calculator, Chess Board,login page, Restaurantwebsides, weather app, digital clock,solar system more..... </p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-palette"></i>
-                                    </div>
-                                    <h4>Web Design</h4>
-                                    <p>Transforming ideas into exceptional digital experience through graphic design</p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-code"></i>
-                                    </div>
-                                    <h4>Source Code</h4>
-                                    <p>Download MY Source Codes on GITHUB. Update Soon...</p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-search"></i>
-                                    </div>
-                                    <h4>Check Out</h4>
-                                    <p>Please Check Out MY TechProfile Links. Update Soon...</p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                            <!-- ===== Services item start ===== -->
-                            <div class="service-item padd-15">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-bullhorn"></i>
-                                    </div>
-                                    <h4>Acheivements</h4>
-                                    <p>My Certifications and Acheivements. Update Soon...</p>
-                                </div>
-                            </div>
-                            <!-- ===== Services item end ===== -->
-                        </div>
-                    </div>
-                </section>
-             <!-- ===== Services section End ===== -->
-
-             <!-- ===== protfolio section start===== -->
-             <!-- ===== protfolio section End===== -->
-
-             <!-- ===== Contact section start===== -->
-             <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                        <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
-                    <div class="row">
-                        <!-- ===== contact info items start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Us On</h4>
-                            <p>+91 9514106040</p>
-                        </div>
-                        <!-- ===== contact info item end =====-->
-                        <!-- ===== contact info items start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <h4>Location</h4>
-                            <p>Tamilnadu</p>
-                        </div>
-                        <!-- ===== contact info item end =====-->
-                        <!-- ===== contact info items start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p>kathiravan172005@gmail.com</p>
-                        </div>
-                        <!-- ===== contact info item end =====-->
-                        <!-- ===== contact info items start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                            <h4>Website</h4>
-                            <p>Update soon</p>
-                        </div>
-                        <!-- ===== contact info item end =====-->
-                    </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
-                    <!-- ===== CONTACT FORM ===== -->
-                    <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send Message</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-             <!-- ===== Contact section End===== -->
-        </div>
-        <!-- ===== Main content end ===== -->
     </div>
-    <!-- ===== Main container end ===== -->
+    <script>
+        let outputScreen=document.getElementById("output-screen"); 
 
-    <!-- ===== JS Files ===== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-    <script src="./script.js"></script>
+        function display(num){
+            outputScreen.value+=num;
+        }
+        function calculate(){
+            try{
+                outputScreen.value=eval(outputScreen.value);
+            }
+            catch(err)
+            {
+                alert("Invalid")
+            }
+        }
+        function clear(){
+            OutputScreen.value="";
+        }
+        function del(){
+            outputScreen.value=outputScreen.value.slice(0,-1);
+        }
+        </script>
 </body>
+
+
 </html>
